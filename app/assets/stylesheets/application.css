@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+:root {
+    --main-color: #485fc7;
+}
+
+.sidebar {
+    overflow-y: auto;
+}
+
+.overcontent {
+    overflow-y: auto;
+}
+
+ul li {
+    margin-bottom: .9rem;
+}
