@@ -27,9 +27,9 @@
                     <br>
 
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+                    <%= render "devise/shared/error_messages", resource: resource %>
                     <div class="field">
-                      <p class="control has-icons-left has-icons-right">
+                      <p class="control has-icons-left">
                       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input is-medium" %>
                           <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>

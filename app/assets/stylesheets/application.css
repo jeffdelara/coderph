@@ -35,3 +35,27 @@ ul li {
 footer {
     margin-top: auto;
 }
+
+.field_with_errors {
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+#error_explanation {
+    color: red;
+    text-align: left;
+}
+
+#error_explanation h2 {
+    text-align: center;
+}
+
+#error_explanation ul {
+    list-style-type: disc;
+    margin: 1rem;
+    margin-left: 2rem;
+}
+
+#error_explanation ul li {
+    margin: 0;
+}

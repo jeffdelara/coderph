@@ -1,29 +1,70 @@
-<h2>Sign up</h2>
+<section class="hero container">
+  <div class="hero-body has-text-centered">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="">
+        <div class="columns box is-desktop is-vcentered">
+            <div class="column is-hidden-mobile">
+                <h1 class="title is-size-3 has-text-weight-bold">
+                    <!-- Be a <span class="is-family-code">coder</span> today -->
+                    <figure class="image is-3by2">
+                      <%= image_tag "developer.svg" %>
+                    </figure>
+                </h1>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                <div>
+                    <h3 class="is-size-4">Learn to code in Tagalog</h3>
+                    <p class="has-text-grey">Lessons in English-Tagalog so YOU can understand code.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h1 class="title is-size-2 has-text-link has-text-weight-bold">[coder]</h1>
+                <h2 class="is-size-3 has-text-weight-bold">
+                    <!-- Be a <span class="is-family-code">coder</span> today -->
+                    Sign Up
+                </h2>
+                <p>Use your email to create an account</p>
+                <br>
+
+
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
+                <div class="field">
+                  <p class="control">
+                    <%= f.email_field :email, class: "input is-medium", autofocus: true, autocomplete: "email", placeholder: "Email" %>
+                  </p>
+                </div>
+
+                
+
+                <div class="field">
+                    <p class="control">
+                      <%= f.password_field :password, class: "input is-medium", autocomplete: "new-password", placeholder: "Password" %>
+                    </p>
+                </div>
+
+              
+                <div class="field">
+                  <p class="control">
+                    <%= f.password_field :password_confirmation, class: "input is-medium", autocomplete: "new-password", placeholder: "Confirm password" %>
+                  </p>
+                </div>
+                
+                <div class="field">
+                  <p class="control">
+                    <%= f.submit "Sign up", class: "button is-link is-fullwidth is-medium" %>
+
+                    <div class="mt-4">
+                        <%= render "devise/shared/links" %>
+                    </div>
+                  </p>
+                </div>
+
+                <% end %>
+            </div>
+        </div>
+    </div>
+
   </div>
+</section>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
